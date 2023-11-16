@@ -6,12 +6,14 @@ public class Main {
         divideNumbers(num, denom);
     }
 
-    public static void divideNumbers(int num, int denom) {
-        if (denom == 0) {
-            throw new ArithmeticException("Error: number isn't divide fro 0");
+    public static int divideNumbers(int num, int denom) {
+        int result = 0;
+        try{
+             result = num /denom;
+            System.out.println("Te result is: " + result);
+        }catch (Exception e){
+            System.out.println("Error: number isn't divide fro 0");
         }
-
-        int result = num / denom;
-        System.out.println("Te result is: " + result);
+        return result;
     }
 }
